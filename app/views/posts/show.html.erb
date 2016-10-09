@@ -1,0 +1,11 @@
+<div class="imageBorder">
+    <%= image_tag(@post.image.url(:medium)) %>
+    <br>
+    <%= @post.description %>
+    <br>
+    <%= @post.created_at.strftime('Posted on %m/%d/%Y at %I:%M%p') %>
+    <br>
+
+
+
+</div>
