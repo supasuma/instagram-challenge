@@ -22,4 +22,15 @@ feature 'commenting' do
     click_button 'Leave Comment'
     expect(page).to have_content('Comment is too short (minimum is 1 character)')
   end
+
+  scenario 'user can remove their own comment' do
+    visit posts_path
+    click_link 'Add a Comment'
+    fill_in "Comment", with: 'Hilarious'
+    click_button 'Leave Comment'
+    visit posts_path
+    click_link 'Delete Comment'
+    expect(page).to_not have_content('Hilarious')
+  end
+
 end

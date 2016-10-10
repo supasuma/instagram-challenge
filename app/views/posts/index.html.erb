@@ -25,6 +25,11 @@
         <%= c.comment %>
         <br>
         <%= c.created_at.strftime('%m/%d/%Y at %I:%M%p') %>
+        <br>
+        <% if user_signed_in? && current_user.id == c.user_id %>
+          <%= link_to "Delete Comment", post_comment_path(post, c), method: :delete %>
+        <% end %><br>
+
       <% end %>
 
 
