@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+
+  #before all authenticate user....except index & show
+  # before_action :authenticate_user!
+
   def new
     @post = Post.new
   end
