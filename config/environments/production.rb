@@ -78,15 +78,15 @@ Rails.application.configure do
 
 
 
-# added below 8 lines to get email errors using exception_notification gem 
-  config.action_mailer.delivery_method = :sendmail
-# Defaults to:
-# config.action_mailer.sendmail_settings = {
-#   :location => '/usr/sbin/sendmail',
-#   :arguments => '-i -t'
-# }
-config.action_mailer.perform_deliveries = true
-config.action_mailer.raise_delivery_errors = true
+# added below 8 lines to get email errors using exception_notification gem
+#   config.action_mailer.delivery_method = :sendmail
+# # Defaults to:
+# # config.action_mailer.sendmail_settings = {
+# #   :location => '/usr/sbin/sendmail',
+# #   :arguments => '-i -t'
+# # }
+# config.action_mailer.perform_deliveries = true
+# config.action_mailer.raise_delivery_errors = true
 
 
 
